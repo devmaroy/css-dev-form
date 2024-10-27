@@ -25,7 +25,7 @@ export const InputCheckboxField = ({
 
   return (
     <div className={classNames("flex flex-col", className)}>
-      <div className="flex items-center gap-2">
+      <div className="flex items-start md:items-center gap-2">
         <div className="relative w-5 h-5 flex-shrink-0">
           <input
             type="checkbox"
