@@ -16,8 +16,6 @@ export default {
         sans: ["Inter var", "sans-serif"],
       },
       colors: {
-        ...mauve,
-        ...violet,
         "bc-blue-400": "#111D4A",
         "bc-blue-300": "#677BC9",
         "bc-blue-200": "#7D8DCA",
@@ -25,6 +23,7 @@ export default {
         "bc-gray-300": "#777F9F",
         "bc-gray-200": "#C0C4D2",
         "bc-gray-100": "#F1F3FA",
+        "bc-red-400": "#E2636A",
       },
     },
   },

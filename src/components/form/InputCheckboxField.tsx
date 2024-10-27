@@ -47,10 +47,10 @@ export const InputCheckboxField = ({
           </div>
         </div>
         <label htmlFor={name} className="font-medium text-bc-blue-400">
-          {label} {withAsterisk && <span className="text-red-500">*</span>}
+          {label} {withAsterisk && <span className="text-bc-red-400">*</span>}
         </label>
       </div>
-      {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+      {error && <p className="text-bc-red-400 text-sm mt-1">{error}</p>}
     </div>
   );
 };

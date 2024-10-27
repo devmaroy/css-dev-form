@@ -20,7 +20,7 @@ export const InputWrapper = ({
   return (
     <div className={classNames("flex flex-col space-y-1", className)}>
       <label htmlFor={name} className="font-medium text-bc-blue-400">
-        {label} {withAsterisk && <span className="text-red-500">*</span>}
+        {label} {withAsterisk && <span className="text-bc-red-400">*</span>}
       </label>
 
       <div
@@ -35,7 +35,7 @@ export const InputWrapper = ({
       >
         <div
           className={classNames("w-full", {
-            "text-red-500": error,
+            "text-bc-red-400": error,
           })}
         >
           {children}
@@ -48,7 +48,7 @@ export const InputWrapper = ({
         )}
       </div>
 
-      {error && <p className="text-red-500 text-sm">{error}</p>}
+      {error && <p className="text-bc-red-400 text-sm">{error}</p>}
     </div>
   );
 };
