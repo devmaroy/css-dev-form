@@ -111,7 +111,7 @@ export const Form = () => {
             <InputDatePicker
               name="personalInformation.birthDate"
               label="Date of Birth"
-              placeholder="DD.MM.RRRR"
+              placeholder="DD.MM.YYYY"
               withAsterisk
               control={control}
               error={errors.personalInformation?.birthDate?.message}
@@ -153,7 +153,7 @@ export const Form = () => {
             <InputDatePicker
               name="employmentDetails.startDate"
               label="Start Date"
-              placeholder="DD.MM.RRRR"
+              placeholder="DD.MM.YYYY"
               withAsterisk
               control={control}
               error={errors.employmentDetails?.startDate?.message}
@@ -193,7 +193,7 @@ export const Form = () => {
             <InputSelectField
               name="contactInformation.state"
               label="State/Province"
-              placeholder="NY"
+              placeholder="Select state"
               withAsterisk
               options={statesOptions}
               control={control}
