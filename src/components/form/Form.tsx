@@ -42,6 +42,7 @@ export const Form = () => {
     handleSubmit,
     register,
     control,
+    reset,
     formState: { errors, isValid },
   } = methods;
 
@@ -53,6 +54,7 @@ export const Form = () => {
     try {
       setIsPending(true);
       await fakeApiCall();
+      reset();
       toast.success("Form submitted successfully!");
 
       console.log("------------------------");
@@ -130,6 +132,7 @@ export const Form = () => {
               register={register}
               error={errors.employmentDetails?.jobTitle?.message}
             />
+
             <InputSelectField
               name="employmentDetails.department"
               label="Department"

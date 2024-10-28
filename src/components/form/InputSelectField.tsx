@@ -39,7 +39,7 @@ export const InputSelectField = ({
   } = useController({
     name,
     control,
-    defaultValue: null,
+    defaultValue: "",
   });
 
   return (
@@ -52,8 +52,9 @@ export const InputSelectField = ({
       <Select<Option>
         options={options}
         value={options.find((option) => option.value === value) || null}
-        onChange={(selectedOption) => onChange(selectedOption?.value)}
+        onChange={(selectedOption) => onChange(selectedOption?.value || "")}
         placeholder={placeholder}
+        isClearable
         unstyled
         components={{
           IndicatorSeparator: () => null, // Remove separator
@@ -66,7 +67,6 @@ export const InputSelectField = ({
             ),
           placeholder: () => "text-bc-gray-200",
           input: () => "text-bc-blue-400",
-
           menu: () =>
             "mt-1 border border-bc-gray-200 rounded-md shadow-lg bg-white overflow-hidden absolute top-[500px]",
           menuList: () => "py-1",
@@ -79,11 +79,8 @@ export const InputSelectField = ({
           multiValue: () => "bg-bc-gray-100 rounded",
           multiValueLabel: () => "px-2 py-1 text-bc-blue-400",
           multiValueRemove: () => "px-1 hover:bg-bc-gray-200 rounded-r",
-
-          clearIndicator: () =>
-            "text-bc-gray-200 hover:text-bc-gray-300 cursor-pointer",
-          dropdownIndicator: () =>
-            "text-bc-gray-200 hover:text-bc-gray-300 cursor-pointer ",
+          clearIndicator: () => "text-bc-gray-200 cursor-pointer",
+          dropdownIndicator: () => "text-bc-gray-200 cursor-pointer ",
           indicatorSeparator: () => "bg-bc-gray-200",
           noOptionsMessage: () => "text-bc-gray-200 p-3.5",
         }}
